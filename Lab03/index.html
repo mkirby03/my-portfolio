@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+   <title>CS 425 Lab #3</title>
+   <meta charset="utf-8">
+   
+   <script type="text/javascript" src="scripts/jquery-3.7.1.min.js"></script>
+   <script type="text/javascript" src="scripts/database.js"></script>
+   <script type="text/javascript" src="scripts/script.js"></script>
+
+</head>
+
+<body>
+
+   <p id="version"></p>
+   
+   <div id="output"></div>
+
+   <script type="text/javascript">
+            
+      $(function() {
+         $("#version").html( "jQuery Version: " + jQuery.fn.jquery );
+         //showEpisodeCount();
+         createTable();
+      });
+      
+  </script>
+
+</body>
+
+</html>
