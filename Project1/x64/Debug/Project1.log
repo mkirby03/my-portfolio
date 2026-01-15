@@ -1,0 +1,7 @@
+﻿  Project1.cpp
+D:\SanDiskSecureAccess Vault\Project1\Project1Template\Project1.cpp(69,18): warning C4834: discarding return value of function with 'nodiscard' attribute
+D:\SanDiskSecureAccess Vault\Project1\Project1Template\Project1.cpp(29,7): warning C4101: 'digit': unreferenced local variable
+  main.cpp
+D:\SanDiskSecureAccess Vault\Project1\Project1Template\main.cpp(32,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  Project1.vcxproj -> D:\SanDiskSecureAccess Vault\Project1\x64\Debug\Project1.exe

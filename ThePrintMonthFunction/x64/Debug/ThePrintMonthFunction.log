@@ -1,0 +1,3 @@
+﻿  ThePrintMonthFunction.cpp
+D:\SanDiskSecureAccess Vault\ThePrintMonthFunction\ThePrintMonthFunction.cpp(22,5): warning C4834: discarding return value of function with 'nodiscard' attribute
+  ThePrintMonthFunction.vcxproj -> D:\SanDiskSecureAccess Vault\ThePrintMonthFunction\x64\Debug\ThePrintMonthFunction.exe
