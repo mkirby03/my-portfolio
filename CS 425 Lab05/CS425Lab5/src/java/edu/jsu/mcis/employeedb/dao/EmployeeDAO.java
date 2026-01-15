@@ -70,10 +70,15 @@ public class EmployeeDAO {
         JsonObject json = new JsonObject();
         
         /* INSERT YOUR CODE HERE */
-        Employee newEmployee = new Employee(employeeid++, parameters);
-        employees.add(newEmployee);
-        //json.put("data",newEmployee.getProperties());
-        
+        boolean success = false;
+        Employee newEmployeeRecord = new Employee(employeeid++, parameters);
+        employees.add(newEmployeeRecord);
+        json.put("data", newEmployeeRecord.getProperties());
+        if (parameters != null) {
+            success = true;
+            json.put("success", success);
+            json.put("message", "Employee record has been created successfully!");
+        }
         return json;
         
     }
@@ -85,24 +90,19 @@ public class EmployeeDAO {
         JsonObject json = new JsonObject();
         
         /* INSERT YOUR CODE HERE */
-/*
-        public JsonObject update(JsonObject parameters) {
-    Integer id = Integer.parseInt(parameters.get("id").toString());
-    for (Employee emp : employees) {
-        if (emp.getId().equals(id)) {
-            // Create updated employee instance and replace
-            Employee updatedEmployee = new Employee(id, parameters);
-            employees.set(employees.indexOf(emp), updatedEmployee);
-            return updatedEmployee.getProperties();
+        int id = Integer.parseInt(parameters.get("id").toString());
+        boolean success = false;
+        for (Employee employee : employees) {
+            if (employee.getId().equals(id)) {
+                Employee update = new Employee(id, parameters);
+                employees.set(employees.indexOf(employee), update);
+                json.put("data", update.getProperties());
+                success = true;
+                json.put("success", success);
+                json.put("message", "Employee record has been updated successfully!");
+            }
         }
-        
-    }
-        
-    return null; // Not found
-}
-     */   
-        return json;
-        
+        return json;   
     }
     
     public JsonObject delete(JsonObject parameters) {
@@ -111,20 +111,31 @@ public class EmployeeDAO {
         
         JsonObject json = new JsonObject();
         
-        /* INSERT YOUR CODE HERE *//*
-        public JsonObject delete(JsonObject parameters) {
-    Integer id = Integer.parseInt(parameters.get("id").toString());
-    for (Employee emp : employees) {
-        if (emp.getId().equals(id)) {
-            employees.remove(emp);
-            return emp.getProperties(); // Return deleted employee data
-        }
-    }
-    return null; // Not found
-}
-     */   
-        return json;
+        /* INSERT YOUR CODE HERE */
+        int id = Integer.parseInt(parameters.get("id").toString());
+        boolean success = false;
         
+        Employee deleted = null;
+        for (Employee employee : employees) {
+            if (employee.getId().equals(id)) {
+                deleted = employee;
+                break;
+            }
+        }
+        if (deleted != null){
+            employees.remove(deleted);
+            success = true;
+            json.put("data", deleted.getProperties());
+            json.put("success", success);
+            json.put("message", "Employee record has been deleted successfully!");
+        }
+        else {
+            success = false;
+            json.put("success", success);
+            json.put("message", "Employee record has not been deleted.");
+        }
+        
+        return json;
     }
     
     public String find(Integer id) {
@@ -134,11 +145,15 @@ public class EmployeeDAO {
         JsonObject json = new JsonObject();
         
         /* INSERT YOUR CODE HERE */
+        boolean success = false;
         for (Employee employee : employees) {
-            if (employee.getId().equals(id))
+            if (employee.getId().equals(id)) {
                 json.put("data", employee.getProperties());
+                success = true;
+                json.put("success", success);
+                json.put("message", "Employee record has been fetched successfully!");
+            }
         }
-        
         return Jsoner.serialize(json);
         
     }
@@ -151,13 +166,14 @@ public class EmployeeDAO {
         
         /* INSERT YOUR CODE HERE */
         JsonArray jsonArray = new JsonArray();
+        boolean success = true;
         for (Employee employee : employees) {
             jsonArray.add(employee.getProperties());
         }
         json.put("data", jsonArray);
+        json.put("success", success);
+        json.put("message", "All employee records have been fetched successfully!");
+        return Jsoner.serialize(json);   
         
-        return Jsoner.serialize(json);
-        
-    }
-    
+    } 
 }

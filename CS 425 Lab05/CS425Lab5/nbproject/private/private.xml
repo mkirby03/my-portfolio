@@ -2,6 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/CS%20425%20Lab05/CS425Lab5/src/java/edu/jsu/mcis/employeedb/EmployeeServlet.java</file>
+            <file>file:/D:/CS%20425%20Lab05/CS425Lab5/web/CS%20425%20Lab04/CS%20425%20Lab04/scripts/script.js</file>
+            <file>file:/D:/CS%20425%20Lab05/CS425Lab5/src/java/edu/jsu/mcis/employeedb/Employee.java</file>
+            <file>file:/D:/CS%20425%20Lab05/CS425Lab5/src/java/edu/jsu/mcis/employeedb/dao/EmployeeDAO.java</file>
+        </group>
     </open-files>
 </project-private>

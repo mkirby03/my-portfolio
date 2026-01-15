@@ -1,0 +1,10 @@
+﻿  grid.cpp
+D:\SanDiskSecureAccess Vault\Project2\Project2\grid.cpp(49,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+D:\SanDiskSecureAccess Vault\Project2\Project2\main.cpp(27,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\SanDiskSecureAccess Vault\Project2\Project2\main.cpp(39,41): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\SanDiskSecureAccess Vault\Project2\Project2\main.cpp(40,43): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\SanDiskSecureAccess Vault\Project2\Project2\main.cpp(49,7): warning C4101: 'opponent_target': unreferenced local variable
+  util.cpp
+  Generating Code...
+  Project2.vcxproj -> D:\SanDiskSecureAccess Vault\Project2\x64\Debug\Project2.exe

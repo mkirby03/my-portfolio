@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+   <title>CS 425 Lab #4</title>
+   <meta charset="utf-8">
+
+   <script type="text/javascript" src="scripts/jquery-3.7.1.min.js"></script>
+   <script type="text/javascript" src="scripts/script.js"></script>
+
+</head>
+
+<body>
+
+   <form name="inputform" id="inputform">
+
+      <fieldset>
+
+         <legend>Add/Edit/Delete Employees</legend>
+         <label for="id">ID:</label>
+         <input type="number" name="id" id="id"><br><br>
+         <label for="firstlast">Name:</label>
+         <input type="text" name="name" id="name">
+         <label for="salary">Salary:</label>
+         <input type="number" name="salary" id="salary">
+         <label for="age">Age:</label>
+         <input type="number" name="age" id="age"><br><br>
+         <input type="button" value="List" onclick="getList()">
+         <input type="button" value="Create" onclick="createEmployee()">
+         <input type="button" value="Update" onclick="updateEmployee()">
+         <input type="button" value="Delete" onclick="deleteEmployee()">
+
+      </fieldset>
+
+   </form>
+
+   <div id="output"></div>
+
+</body>
+
+</html>
